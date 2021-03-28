@@ -10,6 +10,11 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 input,
 textarea,
 button,
