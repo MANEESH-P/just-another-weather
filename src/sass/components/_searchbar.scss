@@ -1,7 +1,7 @@
 .search--container {
   height: 100%;
   width: 100%;
-  padding: 60px 12px 30px 12px;
+  padding: 82px 46px 30px 46px;
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   .search__close-btn {
     position: absolute;
     top: 22px;
-    right: 9px;
+    right: 40px;
     color: #e7e7eb;
     cursor: pointer;
   }
@@ -63,7 +63,7 @@
   }
   .country-list {
     width: 100%;
-    height:calc(100% - 100px);
+    height: calc(100% - 100px);
     max-height: calc(100% - 100px);
     overflow: scroll;
     margin-top: 38px;
@@ -108,4 +108,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 340px) and (max-width: 467px) {
+  .search--container {
+    padding: 60px 12px 30px 12px;
+    .search__close-btn {
+      right: 9px;
+    }
+  }
 }
