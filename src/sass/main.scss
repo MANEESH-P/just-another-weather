@@ -1,0 +1,7 @@
+@import "base/base";
+
+@import "vendors/reset";
+
+@import "components/dashboard", "components/sidebar", "components/week-data", "components/highlights", "components/searchbar", "components/loader";
+
+@import "pages/home";

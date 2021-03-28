@@ -1,0 +1,84 @@
+.weekdata--container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  &.card--day {
+    min-width: 120px;
+    max-width: calc(20% - 16px);
+    flex-grow: 1;
+    height: 177px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e213a;
+    color: #e7e7eb;
+    font-size: 16px;
+    margin-left: 16px;
+    &:first-child {
+      margin-left: 0;
+    }
+    img {
+      height: 62px;
+      width: auto;
+    }
+    .card--day-temperature {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .min-temp,
+      .max-temp {
+        color: #a09fb1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .max-temp {
+        color: #e7e7eb;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .weekdata--container {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+    .card {
+      &.card--day {
+        margin-left: 0;
+        margin-top: 32px;
+        min-width: 140px;
+        max-width: calc(50% - 8px)
+      }
+    }
+  }
+}
+
+@media (min-width: 468px) and (max-width:767px) {
+  .weekdata--container{
+    flex-wrap: wrap;
+    // padding: 0 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    .card{
+      &.card--day{
+        margin-left: 0;
+        margin-top: 32px;
+        min-width: 140px;
+        max-width:calc(20% - 16px);
+      }
+    }
+  }
+}

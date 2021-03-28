@@ -1,0 +1,156 @@
+.sidebar {
+  background: #1e213a;
+  width: 30%;
+  height: 100%;
+  padding: 42px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .sidebar-header {
+    display: flex;
+    widows: 100%;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 8px;
+      border-radius: 50%;
+      color: #e7e7eb;
+      cursor: pointer;
+      transition: all 0.15s ease-in;
+      &:hover {
+        background: #e7e7eb;
+        color: #1e213a;
+      }
+    }
+    padding: 0px 46px;
+    .sidebar-header__search-btn {
+      height: 40px;
+      padding: 11px 18px;
+      background: #6e707a;
+      color: #e7e7eb;
+      box-sizing: border-box;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      &:hover {
+        background: #e7e7eb;
+        color: #1e213a;
+      }
+    }
+  }
+  .sidebar-graphics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background: url("../../assets/Cloud-background.png");
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+      // animation: clouds 10s infinite;
+    }
+    img {
+      width: auto;
+      height: 234px;
+    }
+    overflow: hidden;
+  }
+  .sidebar-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    .sidebar-info__temperature {
+      h1 {
+        color: #e7e7eb;
+        font-size: 144px;
+        font-weight: 500;
+        font-family: "Raleway", sans-serif;
+        .sidebar-info__temperature--unit {
+          font-size: 36px;
+          color: #a09fb1;
+        }
+      }
+    }
+    .sidebar-info__weather-status {
+      font-size: 36px;
+      color: #a09fb1;
+      font-weight: 600;
+    }
+    .sidebar-info--meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .sidebar-info__date,
+    .sidebar-info__location {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      font-style: normal;
+      color: #88869d;
+    }
+    .sidebar-info__location {
+      cursor: default;
+      span {
+        margin-right: 8px;
+      }
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      font-weight: 600;
+      transition: all 0.15s ease-in;
+      &:hover {
+        color: #e7e7eb;
+      }
+    }
+  }
+}
+
+@keyframes clouds {
+  0%,100%{
+    transform:translateX(0%);   
+  }
+  50%{
+    transform:translateX(-5%);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    height:100vh;
+    padding: 18px 0px;
+    .sidebar-header{
+      padding:0px 11px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width:1281px) {
+  .sidebar{
+    width:100%;
+    height:90vh;
+  }
+}

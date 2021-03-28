@@ -1,0 +1,148 @@
+.highlights--container {
+  margin-top: 50px;
+  width: 100%;
+  h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #e7e7eb;
+  }
+  .highlights-info {
+    margin-top: 32px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .highlights__card {
+      min-width: 328px;
+      max-width: calc(50% - 16px);
+      padding: 24px 0px;
+      background: #1e213a;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 16px;
+      cursor: pointer;
+      transition: all 0.15s ease-in;
+      &:first-child {
+        margin-left: 0;
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #e7e7eb;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 75px;
+        color: #e7e7eb;
+        span {
+          font-weight: 400;
+          font-size: 32px;
+        }
+      }
+      .progress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 80%;
+        height: 8px;
+        &::-webkit-progress-bar {
+          background: #e7e7eb;
+          border-radius: 80px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        }
+      }
+      progress[value]::-webkit-progress-value {
+        background-color: #ffec65;
+        border-radius: 80px;
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+      }
+      .wind-direction {
+        display: flex;
+        align-items: center;
+        div {
+          color: #e7e7eb;
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          padding: 8px;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transform: rotate(-135deg);
+          margin-right: 8px;
+          span {
+            margin-top: -1px;
+          }
+          transition: all 0.15s ease-in;
+          &:hover {
+            background: #e7e7eb;
+            color: #1e213a;
+          }
+        }
+      }
+      .progress {
+        .progress__values {
+          display: flex;
+          width: 80%;
+          justify-content: space-between;
+          color: #e7e7eb;
+          margin-bottom: 8px;
+        }
+        .progress__unit {
+          display: flex;
+          width: 80%;
+          margin-top: 8px;
+          color: #e7e7eb;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 467px) {
+  .highlights--container {
+    text-align: center;
+    .highlights-info {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+      .highlights__card {
+        margin-left: 0;
+        margin-top: 32px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 468px) and (max-width: 767px) {
+  .highlights--container {
+    text-align: center;
+    .highlights-info {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+      .highlights__card {
+        &:first-child {
+          margin-right: 8px;
+          margin-left: 8px;
+        }
+        margin-right: 8px;
+        margin-left: 8px;
+        max-width: 100%;
+        margin-top: 32px;
+      }
+    }
+  }
+}

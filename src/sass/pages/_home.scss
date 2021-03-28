@@ -1,0 +1,18 @@
+.home--container {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+  .home--container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1281px)  {
+  .home--container{
+    flex-direction: column;
+  }
+}
