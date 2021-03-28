@@ -18,9 +18,9 @@ const SearchBar = (props) => {
           </span>
           <input type="text" placeholder="Search Location" onChange={(e) => { setSearchTerm(e.target.value) }} />
         </div>
-        <div className="search-form__button">
+        {/* <div className="search-form__button">
           <button>Search</button>
-        </div>
+        </div> */}
       </div>
       {locLoading ?
         <div className="loader--container" style={{ height: 'calc(100% - 100px)' }}>
