@@ -38,11 +38,11 @@ const Sidebar = (props) => {
         <>
           <div className="sidebar-header">
             <button className="sidebar-header__search-btn" onClick={() => toggleSearchBar(!searchBar)}>Search for places</button>
-            <div className="sidebar-header__gps-btn" >
+            {/* <div className="sidebar-header__gps-btn" >
               <span className="material-icons">
                 gps_fixed
               </span>
-            </div>
+            </div> */}
           </div>
           <div className="sidebar-graphics">
             <img src={todayData && weatherImages[todayData.weather_state_abbr]} alt="" />
