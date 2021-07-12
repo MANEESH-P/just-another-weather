@@ -151,7 +151,8 @@
 @media only screen and (max-width: 767px) {
   .sidebar {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: -webkit-fill-available;
     padding: 18px 0px;
     .sidebar-header {
       padding: 0px 11px;
